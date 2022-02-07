@@ -1,0 +1,38 @@
+﻿<Window x:Class="RegistroCarreras.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroCarreras"
+        mc:Ignorable="d"
+        Title="Registro de Carreras" Height="400" Width="500">
+    <Grid>
+        <StackPanel Orientation="Vertical" >
+            <Label Content="Carreras Id" FontWeight="bold" FontSize="15"/>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBox Text="{Binding CarrerasId}" x:Name="BuscarTextBox" Width="300" />
+            <Button
+                Content="🔎 Buscar" Click="BuscarButton_Click"> 
+            </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <Label Content="Nombre:" FontWeight="bold" FontSize=" 15" />
+                <TextBox Text="{Binding Nombre}" x:Name="NombreTextBox" Width="300" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20,20,20,20">
+            <Button x:Name="NuevoButton" Content="🆕Nuevo" Background="#0984e3" Height="50" Click="NuevoButton_Click" />
+
+                <Button x:Name="GuardarButton" Content="✔Guardar" Background="white" Click="GuardarButton_Click" />
+
+                <Button x:Name="EliminarButton" Content="⛔Eliminar" Background="#d63031" Click="EliminarButton_Click" />
+
+            </StackPanel>
+
+            <DataGrid x:Name="LibrosDataGrid" Height="150" Width="380"></DataGrid>
+        </StackPanel>
+
+    </Grid> 
+</Window>
